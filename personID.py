@@ -11,8 +11,8 @@ import csv
 def writeID(name: str):
     # 寫入人名和ID，
     if checkNameExist(name):
-        with open("ID.csv", "r", encoding='utf8') as f:
-            ID = len(f.readlines()) - 1
+
+        ID = getPersonNum()
 
         if ID == 0:
             with open("ID.csv", "w", newline='') as f:
@@ -77,4 +77,4 @@ def getPersonAndID():
 
 
 if __name__ == '__main__':
-    print(getPersonAndID())
+    writeID('aaa')
